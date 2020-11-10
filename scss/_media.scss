@@ -1,0 +1,220 @@
+@media (max-width:1220px){
+    .header{
+        text-align: center;
+    }
+    .input{
+        width: 70vw;
+    }
+    .search__section_inner{
+        justify-content: center;
+    }
+
+    /*==========BURGER=======================*/
+      .nav{
+        display: none;
+      }
+      #menu__toggle {
+        opacity: 0;
+
+        &:checked ~ .menu__btn > span {
+          transform: rotate(45deg);
+          &::before{
+            top: 0;
+            transform: rotate(0);
+          }
+          &::after{
+            top: 0;
+            transform: rotate(90deg);
+          }
+        }
+        &:checked ~ .nav{
+          visibility: visible;
+          left: 0;
+        }
+      }
+  
+      .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+  
+        width: 26px;
+        height: 26px;
+  
+        cursor: pointer;
+        z-index: 999;
+
+        & > span,
+        & > span::before,
+        & > span::after{
+          display: block;
+          position: absolute;
+    
+          width: 100%;
+          height: 2px;
+    
+          background-color: #F1BD45;
+    
+          transition-duration: 0.25s;
+        }
+        & >span::before {
+          content: "";
+          top: -8px;
+        }
+        & > span::after {
+          content: "";
+          top: 8px;
+        }
+      }
+
+      .nav {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+  
+        width: 300px;
+        height: 100%;
+  
+        z-index: 998;
+  
+        margin: 0;
+        padding: 50px 1px;
+  
+        list-style: none;
+  
+        background-color: white;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  
+        transition-duration: 0.25s;
+      }
+     /*---------------------------------------------*/
+     /*---------------------------------------------*/
+    .aside{
+        width: 0;
+        padding-right: 0;
+            &__category {
+                margin-bottom: 15px;
+                & a{
+                    display: block;
+                    padding: 7px 10px;
+                    margin-bottom: 0;
+        
+                    font-size: 13px;
+                    font-weight: 600;
+            
+                    text-decoration: none;
+            
+                    transition-duration: 0.25s;
+                        &:hover {
+                            background-color: #F1BD45;
+                            color:white;
+                        }
+                }
+                & span{
+                    font-size: 15px;
+                    text-align: center;
+                }
+            }
+            &__brands{
+              padding-left: 20px;
+              & a{
+                margin-left: 13vw;
+              }
+            }
+    }
+   
+    .main{
+      width: 100%;
+    }
+    .container{
+      padding: 0 25px;
+    }
+    .price__slide{
+      align-items: center;
+      &_line{
+        width: 215px;
+      }
+      &_dot{
+        left: 90px;
+        &:last-child{
+          display: none;
+        }
+      }
+      &_input-block>input, 
+      &_input-block>span{
+        margin-right: 0;
+      }
+    }
+}
+
+@media (max-width:1024px){
+  .input{
+    width: 50vw  ;
+  }
+  .main__pagination{
+    text-align: center;
+  }
+  .laggedSpan {
+    margin-left: 100px  ;
+  }
+  .slider_section__title{
+    display: flex;
+    flex-direction: column;
+    & span:first-child{
+      margin-bottom: 7px;
+    }
+  }
+}
+@media (max-width:772px){
+  .laggedSpan,
+  .main__sort select{
+    display: none;
+  } 
+}
+@media (max-width:570px){  
+  .main{
+    &__sort{
+      flex-wrap: wrap;
+    }
+    &__pagination{
+      padding: 25px;
+    }
+    &__clarific{
+      flex-wrap: wrap;
+      justify-content: center;
+      & a{
+        margin-top: 5px;
+      }
+    }
+    &__snippets{
+      justify-content: center;
+      text-align: center;
+    }
+    &__snippet{
+      align-items: center;
+      &-price{
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .input{
+    margin-bottom: 15px;
+    width: 90vw;
+  }
+  .search{
+    &__input{
+      margin-right: 0;
+      &_btn{
+        position: initial;
+        border-radius: 3px;
+      }
+    }
+    &__close_btn{
+      display: none;
+    }
+  }
+}
